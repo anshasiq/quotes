@@ -3,31 +3,63 @@
  */
 package quotes;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
+import java.io.*;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.net.HttpURLConnection;
 public class App {
 
-    public static void main(String[] args) {
 
-        String filePath = "C:\\Users\\ahmad\\quotes\\app\\src\\main\\resources\\Q.json";
+    public static void main(String[] args) throws IOException {
+        URL a = null;
+
+        try {
+        a = new URL("https://favqs.com/api/qotd");
+        HttpURLConnection ac = (HttpURLConnection) a.openConnection();
+        ac.setRequestMethod("GET");
+        InputStreamReader reader= new InputStreamReader(ac.getInputStream());
+        BufferedReader pokeBufferReader = new BufferedReader(reader);
+        String pokeData = pokeBufferReader.readLine();
+        System.out.println(pokeData);
+
+        Gson gson=new GsonBuilder().setPrettyPrinting().create();
+        Quote ditto= gson.fromJson(pokeData, Quote.class);
+        System.out.println(ditto);
+        File dittoFile = new File("C:\\Users\\ahmad\\quotes\\app\\src\\main\\resources\\qw.json");
+
+            try (FileWriter writeToDittoFile= new FileWriter(dittoFile,true))
+        {
+            gson.toJson(ditto, writeToDittoFile);
+            writeToDittoFile.write(",");
+        }
+    catch (IOException e){
+        System.out.println("invalid URl: ");
+        e.printStackTrace();
+    }
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
+
 
 
 
 
 //        objectArray[0] = new Quote();
-        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
-            Quote [] allq = new Quote[5];
-            Gson gson = new Gson();
-            allq = gson.fromJson(bufferedReader, Quote[].class);
-            int random = (int)Math.floor(Math.random() * (allq.length - 0 + 1) + 0);
-            System.out.println(allq[random].toString());
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
+//            Quote [] allq = new Quote[5];
+//            Gson gson = new Gson();
+//            allq = gson.fromJson(bufferedReader, Quote[].class);
+//            int random = (int)Math.floor(Math.random() * (allq.length - 0 + 1) + 0);
+//            System.out.println(allq[random].toString());
+//        }
+//        catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
 
     }
