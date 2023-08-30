@@ -1,13 +1,16 @@
+# Lab-9
 # quotes
 
-The program reads a collection of quotes from a JSON file, allowing users to retrieve random quotes or search for quotes by a specific author.
+The program reads a collection of quotes from a Api , allowing users to retrieve random daily quotes .
 
-## Features
 
-**Random Quote:** If no author name is provided as an argument when running the program, the application will display a randomly selected quote along with its author's name.
+## classes
+1. Quote
+2. Quote_info
 
-**Search by Author:** Users can provide an author's name as an argument when running the program. The application will then search through the quote collection and display all quotes attributed to the specified author.
+## Features  
+**daily Quote:** when you run the progrm it will fitch from an api a Quote and present it and save it in qw.json file 
 
 ## How to use
-On every click on the run buttun a random different quote will appear with its author name
+On every click on the run button a random different quote will appear and add it to qw.json
 
