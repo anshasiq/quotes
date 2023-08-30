@@ -28,7 +28,7 @@ public class App {
         Gson gson=new GsonBuilder().setPrettyPrinting().create();
         Quote ditto= gson.fromJson(pokeData, Quote.class);
         System.out.println(ditto);
-        File dittoFile = new File("C:\\Users\\ahmad\\quotes\\app\\src\\main\\resources\\qw.json");
+        File dittoFile = new File("app/src/main/resources/qw.json");
 
             try (FileWriter writeToDittoFile= new FileWriter(dittoFile,true))
         {
