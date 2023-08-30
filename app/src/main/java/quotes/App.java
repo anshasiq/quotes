@@ -23,7 +23,7 @@ public class App {
         InputStreamReader reader= new InputStreamReader(ac.getInputStream());
         BufferedReader pokeBufferReader = new BufferedReader(reader);
         String pokeData = pokeBufferReader.readLine();
-        System.out.println(pokeData);
+//        System.out.println(pokeData);
 
         Gson gson=new GsonBuilder().setPrettyPrinting().create();
         Quote ditto= gson.fromJson(pokeData, Quote.class);
