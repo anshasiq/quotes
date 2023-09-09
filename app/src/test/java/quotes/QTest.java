@@ -1,8 +1,8 @@
+package quotes;
+
 import com.google.gson.Gson;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import quotes.Quote;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ public class QTest {
     @Test
     void toStringReturnRandomQuoteAndItsAuthor(){
 
-        String filePath = "C:\\Users\\ahmad\\quotes\\app\\src\\main\\resources\\Q.json";
+        String filePath = "C:\\Users\\ahmad\\quotes\\app\\src\\main\\resources\\qw.json";
 
         try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
             Quote [] allq = new Quote[5];
