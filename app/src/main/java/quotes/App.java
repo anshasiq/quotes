@@ -41,6 +41,20 @@ public class App {
     }
         }
         catch (IOException e){
+            System.out.println("There Is No Internet connection so i bring random Quote from qw.json");
+   String filePath="app/src/main/resources/qw.json";
+            try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
+            Quote [] allq = new Quote[5];
+            Gson gson = new Gson();
+            allq = gson.fromJson(bufferedReader, Quote[].class);
+            int random = (int)Math.floor(Math.random() * (allq.length - 0 + 1) + 0);
+            System.out.println(allq[random].toString());
+        }
+        catch (IOException q) {
+            System.out.println("Try of the second one ");
+            q.printStackTrace();
+        }
+            System.out.println("sos: ");
             e.printStackTrace();
         }
 
@@ -48,18 +62,6 @@ public class App {
 
 
 
-
-//        objectArray[0] = new Quote();
-//        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
-//            Quote [] allq = new Quote[5];
-//            Gson gson = new Gson();
-//            allq = gson.fromJson(bufferedReader, Quote[].class);
-//            int random = (int)Math.floor(Math.random() * (allq.length - 0 + 1) + 0);
-//            System.out.println(allq[random].toString());
-//        }
-//        catch (IOException e) {
-//            e.printStackTrace();
-//        }
 
 
     }

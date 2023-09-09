@@ -49,7 +49,7 @@
     "author_permalink": "friedrich-nietzsche",
     "body": "The future influences the present just as much as the past."
   }
-}]{
+},{
   "qotd_date": "2023-08-31T00:00:00.000+00:00",
   "quote": {
     "id": 45602,
@@ -118,4 +118,38 @@
     "author_permalink": "tom-landry",
     "body": "Leadership is getting someone to do what they don\u0027t want to do, to achieve what they want to achieve."
   }
-},
+},{
+  "qotd_date": "2023-09-10T00:00:00.000+00:00",
+  "quote": {
+    "id": 58812,
+    "dialogue": false,
+    "privatee": false,
+    "tags": [
+      "truth"
+    ],
+    "url": "https://favqs.com/quotes/samuel-johnson/58812-it-is-more-fr-",
+    "favorites_count": 0,
+    "upvotes_count": 2,
+    "downvotes_count": 0,
+    "author": "Samuel Johnson",
+    "author_permalink": "samuel-johnson",
+    "body": "It is more from carelessness about truth than from intentionally lying that there is so much falsehood in the world."
+  }
+},{
+  "qotd_date": "2023-09-10T00:00:00.000+00:00",
+  "quote": {
+    "id": 304,
+    "dialogue": false,
+    "privatee": false,
+    "tags": [
+      "outlook"
+    ],
+    "url": "https://favqs.com/quotes/winston-churchill/304-a-pessimist-see-",
+    "favorites_count": 6,
+    "upvotes_count": 2,
+    "downvotes_count": 0,
+    "author": "Winston Churchill",
+    "author_permalink": "winston-churchill",
+    "body": "A pessimist sees the difficulty in every opportunity; an optimist sees the opportunity in every difficulty."
+  }
+}]
